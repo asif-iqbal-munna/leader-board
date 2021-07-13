@@ -1,3 +1,14 @@
+/*------- Font Import ---------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+
+
+:root {
+    --small-gutter: 30px;
+    --medium-gutter: 40px;
+}
+
 /******* Initializing the web page and making its boxes to border boxes *******/
 * {
     margin: 0;
@@ -8,14 +19,10 @@
 /****** Basic styles for body ******/
 body {
     font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #F3F1FF;
     color: #272727;
-}
-
-/****** set the width of a row to 1140px ******/
-.row {
-    width: 1140px;
 }
 
 /****** Basic styles for some specific tags ******/
@@ -23,12 +30,16 @@ a {
     text-decoration: none;
 }
 
-h1 {
-    font-size: 45px;
+h2 {
+    font-size: 24px;
     text-transform: capitalize;
+    line-height: 1;
     font-weight: 500;
 }
 
+h3 {
+    font-size: 20px;
+}
 /****** Primary styles for all the buttons ******/
 .btn {
     font-size: 14px;
@@ -37,8 +48,13 @@ h1 {
 }
 
 /****** Some helper classes for faster development process ******/
+
+.color-blue {
+    color: #562EFF;
+}
+
 .mt-sm {
-    margin-top: 20px;
+    margin-top: var(--small-gutter);
 }
 
 .mt-lg {
@@ -51,4 +67,122 @@ h1 {
 
 .center-element {
     margin: 0 auto;
+}
+
+
+/*=======================
+        
+=========================*/
+
+.top-player__title {
+    margin-bottom: var(--medium-gutter);
+}
+
+.player img {
+    width: 56px;
+    height: 56px;
+}
+
+.top-player, .top-blog, .courses {
+    padding: 30px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: var(--small-gutter);
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.player--name {
+    margin-left: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.player-blog, .courses {
+    width: 870px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: var(--small-gutter);
+}
+
+.horizontal-line {
+    border: 1px solid #D1D1D1;
+}
+
+
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--small-gutter) 10px;
+}
+
+.blog {
+    display: flex;
+    align-items: center;
+}
+
+.blog img {
+    width: 177px;
+    height: 117px;
+    margin-right: 16px;
+}
+
+.latest-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.course {
+    padding: 10px;
+    box-shadow:0px 1px 0px 0px rgba(36,38,47,0.10), 0px 4px 6px 0px rgba(0,0,0,0.06);
+    border-radius: 10px;
+}
+
+.course:not(:last-child) {
+    margin-right: 20px;
+}
+
+.course img {
+    width: 100%;
+}
+
+.course .author {
+    color: #ED6B4F;
+    font-size: 15px;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.ratings {
+    color: #FFC014;
+    font-size: 12px;
+}
+
+.ratings span {
+    color: #A2A2A2;
+    margin-left: 5px;
+}
+
+.time {
+    color: #FF4A60;
+    background-color: #FEE5DF;
+    padding: 2px 5px;
+    font-size: 15px;
+    border-radius: 60px;
+    text-align: center;
 }
